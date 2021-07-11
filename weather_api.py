@@ -29,6 +29,7 @@ def get_data(url, tag, id="seven-day-forecast", class_="tombstone-container"):
     # logging.info("Info function")
     content, tag_content, id_content, class_content = None, None, None, None
     page = requests.get(url)
+    logging.info(page)
     content = BeautifulSoup(page.content, 'html.parser')
     if tag is not None:
         tag_content = content.find_all(tag)
