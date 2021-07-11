@@ -24,28 +24,27 @@ def get_data(url, tag, id="seven-day-forecast", class_="tombstone-container"):
             class_ (str): HTML class
         
         Returns:
-            weather (dataframe): Returns dataframe
+            data (dataframe): Returns jsonified output
     """ 
+    # logging.info("Info function")
     content, tag_content, id_content, class_content = None, None, None, None
     page = requests.get(url)
-    print("In function")
-    if page.status_code == 200:
-        content = BeautifulSoup(page.content, 'html.parser')
-        if tag is not None:
-            tag_content = content.find_all(tag)
-        if id is not None:
-            id_content = content.find(id=id)
-        if class_ is not None:
-            class_content = id_content.find_all(class_= class_)
-
-        period_tags = id_content.select(".tombstone-container .period-name")
-        periods = [pt.get_text() for pt in period_tags]
-        short_descs = [sd.get_text() for sd in seven_day.select(".tombstone-container .short-desc")]
-        temps = [t.get_text() for t in seven_day.select(".tombstone-container .temp")]
-        descs = [d["title"] for d in seven_day.select(".tombstone-container img")]
-        # print(short_descs)
-        # print(temps)
-        # print(descs)
+    content = BeautifulSoup(page.content, 'html.parser')
+    if tag is not None:
+        tag_content = content.find_all(tag)
+    if id is not None:
+        id_content = content.find(id=id)
+    if class_ is not None:
+        class_content = id_content.find_all(class_= class_)
+        
+    period_tags = id_content.select(".tombstone-container .period-name")
+    periods = [pt.get_text() for pt in period_tags]
+    short_descs = [sd.get_text() for sd in seven_day.select(".tombstone-container .short-desc")]
+    temps = [t.get_text() for t in seven_day.select(".tombstone-container .temp")]
+    descs = [d["title"] for d in seven_day.select(".tombstone-container img")]
+    # print(short_descs)
+    # print(temps)
+    # print(descs)
 
     weather = pd.DataFrame({
         "period": periods,
@@ -53,7 +52,10 @@ def get_data(url, tag, id="seven-day-forecast", class_="tombstone-container"):
         "temp": temps,
         "desc":descs
     })
-    
+
+    data = weather.to_json(orient="records", mimetype='application/json')
+
+    return data
 
 
 @app.route('/', methods=["GET", "POST"])
@@ -63,13 +65,20 @@ def return_data():
 
     if flask.request.method == "POST":
         try:
-            url = flask.request.form.get("url", "https://forecast.weather.gov/MapClick.php?lat=37.7772&lon=-122.4168")
+            # logging.info("in try")
+            # url = flask.request.form.get("url", "https://forecast.weather.gov/MapClick.php?lat=37.7772&lon=-122.4168")
+            # tag = flask.request.form.get("tag", None)
+            # id_ = flask.request.form.get("id", "seven-day-forecast")
+            # class_ = flask.request.form.get("class", "tombstone-container")
+            url = flask.request.form.get("url", None)
             tag = flask.request.form.get("tag", None)
-            id_ = flask.request.form.get("id", "seven-day-forecast")
-            class_ = flask.request.form.get("class", "tombstone-container")
-            data = get_data(url, tag, id_, class_)
+            id_ = flask.request.form.get("id", None)
+            class_ = flask.request.form.get("class", None)
+            # logging.info("loaded %s, %s, %s, %s" %(url, tag, id_, class_))
 
-            data = data.to_json(orient="records", mimetype='application/json')
+            data = get_data(url, tag, id_, class_)
+            logging.info(data)
+
 
             return Response(response=json.dumps(data),
                                     status=200,
