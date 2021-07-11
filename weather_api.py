@@ -26,8 +26,13 @@ def get_data(url, tag, id="seven-day-forecast", class_="tombstone-container"):
         Returns:
             data (dataframe): Returns jsonified output
     """ 
-    # logging.info("Info function")
+    # logging.info("In get_data function")
     content, tag_content, id_content, class_content = None, None, None, None
+    logging.info(url)
+    logging.info(tag)
+    logging.info(id)
+    logging.info(class_)
+
     page = requests.get(url)
     logging.info(page)
     content = BeautifulSoup(page.content, 'html.parser')
