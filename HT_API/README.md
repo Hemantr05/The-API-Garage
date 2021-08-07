@@ -12,18 +12,17 @@
 ### Usage:
 
    Start the server:
-      ```
+   
       $ python get_article.py
-      ```
 
    Open postman, and type the following url:
-      ```
+   
       http://0.0.0.0:5000/
-      ```
-   In body, 
-   1. Select <b>form-data</b> and 
+      
+   In body:
+   1. Select <b>form-data</b>
    2. Add <b>key</b> as <i>author_name</i>
-   3. The corresonding value to the <i>author_name</i> key will be 
+   3. The corresonding <b>value</b> to the <i>author_name</i> key will be 
       author who's article you would want to extract
 
 
