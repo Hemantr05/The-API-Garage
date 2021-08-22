@@ -1,4 +1,4 @@
-# YOLOV3 Object Detection
+<h2 align="center">YOLOV3 Object Detection</h2>
 
 ### Installation:
 
