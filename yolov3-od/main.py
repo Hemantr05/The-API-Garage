@@ -1,15 +1,9 @@
-import cv2
-import os
-import shutil
-from pathlib import Path
 from fastapi import FastAPI, File, UploadFile
 from fastapi.responses import StreamingResponse
 
 from utils import (predictImage, 
                     predictVideo, 
-                    testFunction,
-                    save_upload_file_tmp
-                    )
+                    save_upload_file_tmp)
 
 
 app = FastAPI()
@@ -22,22 +16,17 @@ async def get():
 @app.post("/")
 async def predict(file: UploadFile = File(...)):
 
-    # with open("input.jpg", "wb") as buffer:
-    #     shutil.copyfileobj(file.file, buffer)
-    # filename = Path(buffer.name)
-    # filename = filename.name
-    # filename = buffer.name
-
     filename = save_upload_file_tmp(file, "uploads")
 
-    # img_bytes = testFunction(filename)
-    # return StreamingResponse(img_bytes, media_type="image/png")
-
     # Check for file type (image or video)
-    # print(filename)
-    predicted = predictImage(filename)
+
+    # For image
+    predicted = await predictImage(filename)
     return StreamingResponse(predicted, media_type="image/png")
 
+
+    # TODO: read and return predicted video file .
+    # For video
 
     
     # Download or send response as image or video with predictions
