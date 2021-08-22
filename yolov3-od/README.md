@@ -17,8 +17,6 @@ and move into working directory
 ```pip install -r requirements.txt```
 
 
-## Usage
-
 ## Start server:
 
 1. **Using uvicorn:**
