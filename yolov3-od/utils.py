@@ -9,7 +9,7 @@ from tempfile import NamedTemporaryFile
 from fastapi import FastAPI, File, UploadFile
 
 
-def predictImage(imageDir):
+async def predictImage(imageDir):
     """Returns image with predictions"""
     os.system("cd darknet && ./darknet detect cfg/yolov3.cfg yolov3.weights {}".format(imageDir))
     image = cv2.imread("darknet/predictions.jpg")
