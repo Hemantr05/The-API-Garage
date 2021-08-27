@@ -1,4 +1,4 @@
-<h2 align="center">doc layout</h2>
+<h2 align="center">Document Layout</h2>
 
 ### Installation:
 
