@@ -1,4 +1,4 @@
-<h2 align="center">DocProc</h2>
+<h2 align="center">doc layout</h2>
 
 ### Installation:
 
