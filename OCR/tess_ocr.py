@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 
 async def json_response(img):
+    """Returns jsonified response for given invoice"""
     img = Image.open(img)
     extracted_text = pytesseract.image_to_string(img, lang = 'deu')
 

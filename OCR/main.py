@@ -13,6 +13,7 @@ def get():
 
 @app.post('/')
 async def get_ocr(file: UploadFile = File(...)):
+    """OCR for input pdf/image file"""
     filename = save_upload_file_tmp(file, ".")
     stem, extn = filename.stem, filename.suffix
 
