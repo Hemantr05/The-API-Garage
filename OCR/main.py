@@ -26,7 +26,7 @@ async def get_ocr(file: UploadFile = File(...)):
         for idx, img in enumerate(images):
             ocr = await json_response(img)
             ocr['page_no'] = idx+1
-            pdf_response += ocr
+            pdf_responsea.append(ocr)
         return pdf_response
     else:
         raise HTTPException(status_code=404, detail="Invalid file type")
