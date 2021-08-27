@@ -1,0 +1,14 @@
+pytest
+numpy
+opencv-python
+pandas
+docutils==0.16
+Sphinx==3.0.0
+recommonmark==0.6.0
+sphinx-markdown-tables
+sphinx_rtd_theme
+google-cloud-vision==1
+pytesseract
+pycocotools
+git+https://github.com/facebookresearch/detectron2.git@v0.4#egg=detectron2
+paddlepaddle
