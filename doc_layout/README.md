@@ -6,7 +6,7 @@
 
 and move into working directory
 
-```git clone https://github.com/Hemantr05/ML_APIs && cd DocProc```
+```git clone https://github.com/Hemantr05/ML_APIs && cd doc_layout```
 
 **Setting up yolov3**
 
