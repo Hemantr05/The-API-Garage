@@ -28,6 +28,7 @@ async def page_layout(file: UploadFile = File(...), threshold: float = Form(...)
         for pno, img in enumerate(images):
             layout = await detect_layout_from_img(img, threshold)
             layout['page_no'] = pno+1
+            layout['page_width'], layout['page_height'] = img.width, img.height
             all_pages.append(layout)
         return all_pages
 
