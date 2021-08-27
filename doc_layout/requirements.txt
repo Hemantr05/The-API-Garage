@@ -1,0 +1,16 @@
+pytesseract
+fastapi==0.68.0
+uvicorn[standard]
+hypercorn
+python-multipart==0.0.5
+numpy
+pillow
+tempfile
+shutil
+pdf2image
+click==7.1.1
+spacy-transformers
+spacy
+layoutparser[ocr]
+torch==1.6
+torchvision==0.10.0
