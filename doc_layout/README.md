@@ -32,4 +32,4 @@ Open http://127.0.0.1:8000/docs in your browser
 
 ## Result:
 
-![alt-text-1](./imgs/merged_notes_4_pg31.png "original") ![alt-text-2](./imgs/merged_notes_4_pg31_result.png "after_ocr")
+![alt-text-1](./imgs/merged_notes_4_pg31.png "original") ![alt-text-2](./imgs/merged_notes_4_pg31_result2.png "after_ocr")
