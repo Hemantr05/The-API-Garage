@@ -14,3 +14,4 @@ spacy
 layoutparser[ocr]
 torch==1.6
 torchvision==0.10.0
+pycocotools
