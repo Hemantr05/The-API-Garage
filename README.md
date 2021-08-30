@@ -4,7 +4,11 @@ A collection of machine learning apis in fastapi deployed using uvicorn, hyperco
 ## TODO
 
 [ ] Cloud deployment
+
   [ ] AWS
+  
   [ ] GCP
+  
   [ ] Azure
+  
 [ ] Dashboard containing all APIs
