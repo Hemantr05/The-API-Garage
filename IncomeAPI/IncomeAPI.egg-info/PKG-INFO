@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: IncomeAPI
+Version: 0.1.0
+Summary: Predict whether income exceeds $50K/yr based on census data. Also known as "Census Income" dataset. Sklearn
+Home-page: https://github.com/Hemantr05/Income-API
+Author: Hemant Rakesh
+Author-email: hemantrak05@gmail.com
+License: MIT
+Download-URL: https://github.com/tflearn/tflearn/tarball/0.5.0
+Description: UNKNOWN
+Keywords: API,Django,PyTorch,Machine Learning,Neural Networks,AI
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence

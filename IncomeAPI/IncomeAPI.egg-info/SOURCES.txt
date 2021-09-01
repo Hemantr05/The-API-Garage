@@ -1,0 +1,7 @@
+README.md
+setup.py
+IncomeAPI.egg-info/PKG-INFO
+IncomeAPI.egg-info/SOURCES.txt
+IncomeAPI.egg-info/dependency_links.txt
+IncomeAPI.egg-info/requires.txt
+IncomeAPI.egg-info/top_level.txt

@@ -1,0 +1,11 @@
+numpy
+six
+Pillow
+markdown
+djangorestframework
+django-filter
+pandas
+scikit-learn
+joblib
+django
+requests
