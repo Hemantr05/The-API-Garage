@@ -37,8 +37,8 @@ Open http://127.0.0.1:8000/docs in your browser
 
 ```json
 {
-	'score': 0.9978761672973633,
- 	'sentiment': 'NEGATIVE',
- 	'text': "I really don't like what you did"
+	"score": 0.9978761672973633,
+ 	"sentiment": "NEGATIVE",
+ 	"text": "I really don't like what you did"
 }
 ```
