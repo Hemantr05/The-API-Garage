@@ -1,0 +1,6 @@
+opencv-python
+fastapi==0.68.0
+uvicorn[standard]
+hypercorn
+python-multipart==0.0.5
+matplotlib
