@@ -1,5 +1,5 @@
-# ML_APIS
-A collection of machine learning apis in fastapi deployed using uvicorn, hypercorn and docker
+<h1 align='center'>The API Garage (TAG)</h1>
+<p align='center'>A collection of machine learning apis in fastapi deployed using uvicorn, hypercorn and docker</p>
 
 ## TODO
 
