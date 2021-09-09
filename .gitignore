@@ -1,2 +1,20 @@
+# Folders
 darknet/
 __pycache__
+cuda/
+
+# Log files
+*.log
+
+# Data files
+*.zip
+*.json
+*.csv
+
+# Image files
+*.png
+*.jpg
+*.jpeg
+
+# Driver files
+*.so
