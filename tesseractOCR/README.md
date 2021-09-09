@@ -6,7 +6,7 @@
 
 and move into working directory
 
-```git clone https://github.com/Hemantr05/ML_APIs && cd ocr```
+```git clone https://github.com/Hemantr05/ML_APIs && cd tesseractOCR/ocr```
 
 **Setting up yolov3**
 
