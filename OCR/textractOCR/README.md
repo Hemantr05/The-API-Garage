@@ -1,4 +1,4 @@
-<h2 align="center">tesseract OCR</h2>
+<h2 align="center">Textract OCR</h2>
 
 ### Installation:
 
@@ -6,15 +6,11 @@
 
 and move into working directory
 
-```git clone https://github.com/Hemantr05/ML_APIs && cd OCR/tesseractOCR```
+```git clone https://github.com/Hemantr05/ML_APIs && cd OCR/textractOCR```
 
-**Setting up tesseract**
+**Install requirements**
 
-```
-sudo apt-get update -y
-sudo apt-get install -y poppler-utils
-sudo apt install tesseract-ocr
-```
+```pip install -r requirements.txt```
 
 ## Start server:
 

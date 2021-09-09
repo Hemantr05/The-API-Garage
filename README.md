@@ -13,7 +13,7 @@
   
 - Dashboard containing all APIs
 
-- set url for all APIs:
+- set url path for all APIs:
   - for nlp APIs, (example ner API):
     - http://127.0.0.1:8000/nlp/ner
   - for vision APIs, (example yolo-od):
