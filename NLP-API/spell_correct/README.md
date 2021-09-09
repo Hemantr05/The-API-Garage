@@ -6,7 +6,7 @@
 
 and move into working directory
 
-```git clone https://github.com/Hemantr05/ML_APIs && cd spell_correct```
+```git clone https://github.com/Hemantr05/ML_APIs && cd NLP-API/spell_correct```
 
 **Setting up yolov3**
 

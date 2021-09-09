@@ -7,7 +7,7 @@
 
 and move into working directory
 
-```git clone https://github.com/Hemantr05/ML_APIs && cd sentiment_analysis```
+```git clone https://github.com/Hemantr05/ML_APIs && cd NLP-API/sentiment_analysis```
 
 **Install requirements**
 
