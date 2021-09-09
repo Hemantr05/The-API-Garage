@@ -35,7 +35,7 @@ Open http://127.0.0.1:8000/docs in your browser
 
 1. Simple Analyzer:
 
-```json
+```
 {
 	'result': 
 		[
