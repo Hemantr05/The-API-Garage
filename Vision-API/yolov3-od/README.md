@@ -6,7 +6,7 @@
 
 and move into working directory
 
-```git clone https://github.com/Hemantr05/ML_APIs && cd yolov3-od```
+```git clone https://github.com/Hemantr05/ML_APIs && cd Vision-API/yolov3-od```
 
 **Setting up yolov3**
 
