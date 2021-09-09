@@ -1,6 +1,4 @@
-import logging
 from fastapi import FastAPI, Form, FileUpload, File, HTTPException
-logging.basicConfig(filename='compile.log', level=logging.DEBUG)
 
 from utils import *
 
