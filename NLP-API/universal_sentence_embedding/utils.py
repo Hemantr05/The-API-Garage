@@ -14,13 +14,12 @@ logging.basicConfig(filename='compile.log', level=logging.DEBUG)
 
 module_url = "https://tfhub.dev/google/universal-sentence-encoder/4"
 model = hub.load(module_url)
-print ("module %s loaded" % module_url)
+logging.info("module %s loaded" % module_url)
 def embed(message):
   return model(message)
 
 def USE(text):
     response = dict()
-    logging.info('Loaded USE module')
     messages = [text]
     message_embeddings = embed(messages)
     logging.info(f'successfully generated embeddings of length {len(message_embeddings)}')
