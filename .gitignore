@@ -8,7 +8,6 @@ cuda/
 
 # Data files
 *.zip
-*.json
 *.csv
 
 # Image files
