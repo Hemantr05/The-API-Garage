@@ -1,0 +1,7 @@
+fastapi==0.61.1
+uvicorn[standard]
+pydantic[email]
+motor==2.2.0
+typing
+passlib[bcrypt]
+python-jose[cryptography]
