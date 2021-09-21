@@ -36,3 +36,11 @@ Open http://127.0.0.1:8000/docs in your browser
 ## Result:
 
 ![alt-text-1](./imgs/demo.png "original") ![alt-text-2](./imgs/demo_result.png "after_ocr")
+
+
+
+## TODO:
+
+1. Document classifier
+
+2. Standard tesseract output format (JSON)
