@@ -1,13 +1,12 @@
 import re
+import cv2
 import json
 import pytesseract
 import matplotlib.pyplot as plt 
 
-from PIL import Image
-
 async def json_response(img):
     """Returns jsonified response for given invoice"""
-    img = Image.open(img)
+    img = cv2.imreade(img)
     extracted_text = pytesseract.image_to_string(img, lang = 'deu')
 
     receipt_ocr = {}
