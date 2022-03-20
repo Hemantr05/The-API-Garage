@@ -4,6 +4,7 @@ WORKDIR /app
 COPY ./requirements.txt /app/requirements.txt
 RUN apt-get update && \
     apt install gcc g++ libgeos-dev -y && \
+    apt install poppler-utils ffmpeg libsm6 libxext6 libgl1-mesa-glx -y && \
     pip install --upgrade pip && \
     pip install --no-cache-dir --upgrade -r /app/requirements.txt
 
